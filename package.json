@@ -1,26 +1,28 @@
 {
-  "name": "ioBroker.marstek",
-  "version": "0.0.2",
+  "name": "iobroker.marstek",
+  "version": "0.0.1",
   "description": "ioBroker adapter for Marstek Venus devices via Open API (UDP JSON-RPC)",
-  "author": "has-sTealth",
+  "author": "has-sTeaLth",
   "license": "MIT",
 
   "main": "main.js",
 
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/has-sTealth/ioBroker.marstek.git"
+    "url": "https://github.com/has-sTeaLth/iobroker.marstek.git"
   },
   "bugs": {
-    "url": "https://github.com/has-sTealth/ioBroker.marstek/issues"
+    "url": "https://github.com/has-sTeaLth/iobroker.marstek/issues"
   },
-  "homepage": "https://github.com/has-sTealth/ioBroker.marstek#readme",
+  "homepage": "https://github.com/has-sTeaLth/iobroker.marstek#readme",
 
   "keywords": [
-    "ioBroker",
-    "adapter",
+    "iobroker",
+    "iobroker-adapter",
     "marstek",
     "venus",
+    "energy",
+    "battery",
     "udp",
     "json-rpc"
   ],
@@ -30,12 +32,21 @@
   },
 
   "dependencies": {
-    "@ioBroker/adapter-core": "^3.3.2"
+    "@iobroker/adapter-core": "3.3.2"
   },
 
   "devDependencies": {
-    "@ioBroker/adapter-dev": "^1.4.0"
+    "@iobroker/adapter-dev": "^1.4.0",
+    "@iobroker/testing": "5.2.2"
   },
+
+  "files": [
+    "admin/**/*",
+    "main.js",
+    "io-package.json",
+    "LICENSE",
+    "README.md"
+  ],
 
   "scripts": {
     "test": "node -c main.js"
