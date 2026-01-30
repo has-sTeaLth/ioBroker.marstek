@@ -1,44 +1,71 @@
-"common": {
-  "name": "marstek",
-  "version": "0.0.1",
-  "titleLang": {
-    "en": "Marstek Venus (Open API)",
-    "de": "Marstek Venus (Open API)"
-  },
-  "desc": {
-    "en": "Connects Marstek Venus devices via UDP JSON-RPC Open API.",
-    "de": "Bindet Marstek Venus Geräte über UDP JSON-RPC Open API an."
-  },
-  "type": "energy",
-  "tier": 3,
-  "authors": ["has-sTeaLth"],
-  "licenseInformation": {
-    "type": "MIT",
-    "license": "MIT",
-    "link": "LICENSE"
-  },
-  "platform": "Javascript/Node.js",
-  "mode": "daemon",
-  "icon": "marstek.png",
-  "extIcon": "https://raw.githubusercontent.com/has-sTeaLth/iobroker.marstek/main/admin/marstek.png",
-  "enabled": true,
-  "readme": "README.md",
-  "loglevel": "info",
-  "compact": true,
-  "connectionType": "local",
-  "dataSource": "poll",
-  "adminUI": {
-    "config": "html"
-  },
-  "keywords": ["marstek", "venus", "battery", "energy", "udp", "json-rpc"],
-  "dependencies": [],
-  "globalDependencies": [
-    { "admin": ">=6.17.14" }
-  ],
-  "news": {
-    "0.0.1": {
-      "en": "Initial release.",
-      "de": "Initiale Version."
+{
+  "common": {
+    "name": "marstek",
+    "version": "0.0.1",
+    "titleLang": {
+      "en": "Marstek Venus (Open API)",
+      "de": "Marstek Venus (Open API)"
+    },
+    "desc": {
+      "en": "Connects Marstek Venus devices via UDP JSON-RPC Open API.",
+      "de": "Connects Marstek Venus devices via UDP JSON-RPC Open API."
+    },
+    "type": "energy",
+    "tier": 3,
+    "authors": [
+      "has-sTeaLth"
+    ],
+    "licenseInformation": {
+      "type": "MIT",
+      "license": "MIT",
+      "link": "LICENSE"
+    },
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "icon": "marstek.png",
+    "extIcon": "https://raw.githubusercontent.com/has-sTeaLth/iobroker.marstek/main/admin/marstek.png",
+    "enabled": true,
+    "readme": "README.md",
+    "loglevel": "info",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "html"
+    },
+    "keywords": [
+      "marstek",
+      "venus",
+      "energy",
+      "battery",
+      "udp",
+      "json-rpc"
+    ],
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.19"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=6.17.14"
+      }
+    ],
+    "news": {
+      "0.0.1": {
+        "en": "Initial release.",
+        "de": "Initiale Version."
+      }
     }
-  }
+  },
+  "native": {
+    "ip": "",
+    "port": 30000,
+    "modelGroup": "auto",
+    "pollIntervalSec": 15,
+    "timeoutMs": 8000,
+    "interCallDelayMs": 150
+  },
+  "objects": [],
+  "instanceObjects": []
 }
