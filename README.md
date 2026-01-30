@@ -16,11 +16,11 @@ In der Adapter-Instanz:
   - **Auto** (Default, empfohlen): erkennt *Venus D* automatisch, sonst *Venus C/E*
   - **Venus C / E**: ohne PV
   - **Venus D**: mit PV
-- **Poll interval (sec)**: Abfrageintervall (z.B. `15`)
+- **Poll interval (sec)**: Abfrageintervall (z.B. `30`)
 - **UDP timeout (ms)**: Timeout pro Request (z.B. `8000`)
-- **Inter-call delay (ms)**: Pause zwischen einzelnen Requests (z.B. `150`) – erhöht die Stabilität bei manchen Firmwares
+- **Inter-call delay (ms)**: Pause zwischen einzelnen Requests (z.B. `200`) – erhöht die Stabilität bei manchen Firmwares
 
-Tipp: Wenn `Bat.GetStatus` sporadisch Timeouts liefert, den **Inter-call delay** auf `180–220 ms` erhöhen.
+Tipp: Wenn `Bat.GetStatus` sporadisch Timeouts liefert, den **Inter-call delay** auf `220–250 ms` erhöhen.
 
 ## Changelog
 
