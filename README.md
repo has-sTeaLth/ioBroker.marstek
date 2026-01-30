@@ -2,25 +2,58 @@
 
 # ioBroker.marstek
 
-ioBroker Adapter für Marstek **Venus** Geräte über die **Open API (UDP JSON-RPC)**.
+ioBroker adapter for **Marstek Venus** devices using the **Open API (UDP JSON-RPC)**.
 
-Der Adapter fragt zyklisch Status-Komponenten ab (u.a. **Marstek**, **WiFi**, **BLE**, **Battery**, **ES**, **EM** – bei Modellgruppe *Venus D* zusätzlich **PV**) und erstellt die Datenpunkte automatisch und strukturiert anhand der API-Antworten.
+The adapter polls the device periodically, automatically creates all available data points, and structures them based on the API responses.
 
-## Konfiguration
+Supported components include:
+- Marstek (device info)
+- WiFi
+- BLE
+- Battery
+- ES
+- EM  
+- PV (only for Venus D models)
 
-In der Adapter-Instanz:
+---
 
-- **Device IP**: IP-Adresse des Venus-Geräts im LAN
-- **UDP Port**: Standard `30000`
-- **Model group**:
-  - **Auto** (Default, empfohlen): erkennt *Venus D* automatisch, sonst *Venus C/E*
-  - **Venus C / E**: ohne PV
-  - **Venus D**: mit PV
-- **Poll interval (sec)**: Abfrageintervall (z.B. `30`)
-- **UDP timeout (ms)**: Timeout pro Request (z.B. `8000`)
-- **Inter-call delay (ms)**: Pause zwischen einzelnen Requests (z.B. `200`) – erhöht die Stabilität bei manchen Firmwares
+## Configuration
 
-Tipp: Wenn `Bat.GetStatus` sporadisch Timeouts liefert, den **Inter-call delay** auf `220–250 ms` erhöhen.
+Configure the adapter instance in the ioBroker admin interface.
+
+### Device settings
+- **Device IP**  
+  IP address of the Marstek Venus device in your local network.
+
+- **UDP Port**  
+  Default: `30000`
+
+- **Model group**
+  - **Auto** (default, recommended)  
+    Automatically detects *Venus D*, otherwise uses *Venus C / E*.
+  - **Venus C / E**  
+    Without PV component.
+  - **Venus D**  
+    Includes PV component.
+
+### Polling settings
+- **Poll interval (sec)**  
+  Interval for polling the device (e.g. `30`).
+
+- **UDP timeout (ms)**  
+  Timeout per request (e.g. `8000`).
+
+- **Inter-call delay (ms)**  
+  Delay between individual API calls (e.g. `200`).  
+  Increasing this value can improve stability on some firmware versions.
+
+---
+
+## Notes
+
+- All available data points are created automatically.
+- Objects are read-only.
+- If `Bat.GetStatus` occasionally times out, increase **Inter-call delay** to `220–250 ms`.
 
 ## Changelog
 
