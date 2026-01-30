@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "ioBroker adapter for Marstek Venus devices via Open API (UDP JSON-RPC)",
   "author": "has-sTeaLth",
-  "license": "free",
+  "license": "MIT",
 
   "main": "main.js",
 
@@ -32,12 +32,12 @@
   },
 
   "dependencies": {
-    "@iobroker/adapter-core": "3.3.2"
+    "@iobroker/adapter-core": "^3.3.2"
   },
 
   "devDependencies": {
     "@iobroker/adapter-dev": "^1.4.0",
-    "@iobroker/testing": "5.2.2"
+    "@iobroker/testing": "^5.2.2"
   },
 
   "files": [
