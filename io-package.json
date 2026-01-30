@@ -41,6 +41,10 @@
       "udp",
       "json-rpc"
     ],
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
     "dependencies": [
       {
         "js-controller": ">=5.0.19"
