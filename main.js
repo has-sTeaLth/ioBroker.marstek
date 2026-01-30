@@ -1,11 +1,16 @@
 'use strict';
 
 /**
- * ioBroker.marstek v0.2.4
+ * ioBroker.marstek v0.0.1
  *
  * Changes:
  *  - Removed discovery feature completely (always polls all supported methods for modelGroup)
  *  - Keeps stability fixes: no overlapping polls, per-method error handling, inter-call delay
+ *
+ * ioBroker.marstek v0.0.2
+ *
+ * Changes:
+ *  - Default poll intervall to 30s and inter-call delay to 200ms
  */
 
 const utils = require('@iobroker/adapter-core');
@@ -28,9 +33,9 @@ class MarstekAdapter extends utils.Adapter {
   async onReady() {
     const ip = (this.config.ip || '').trim();
     const port = Number(this.config.port || 30000);
-    const pollIntervalSec = Math.max(5, Number(this.config.pollIntervalSec || 15));
+    const pollIntervalSec = Math.max(5, Number(this.config.pollIntervalSec || 30));
     const timeoutMs = Math.max(1000, Number(this.config.timeoutMs || 8000));
-    const interCallDelayMs = Math.max(0, Number(this.config.interCallDelayMs ?? 150));
+    const interCallDelayMs = Math.max(0, Number(this.config.interCallDelayMs ?? 200));
 
     await this.setObjectNotExistsAsync('info.connection', {
       type: 'state',
