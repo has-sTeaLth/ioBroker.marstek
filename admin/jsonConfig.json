@@ -71,8 +71,8 @@
                 "type": "number",
                 "label": "Inter-call delay (ms)",
                 "min": 0,
-                "max": 1000,
-                "default": 200,
+                "max": 10000,
+                "default": 300,
                 "sm": 12,
                 "md": 4
               }
