@@ -3,18 +3,18 @@
   "version": "0.0.1",
   "description": "ioBroker adapter for Marstek Venus devices via Open API (UDP JSON-RPC)",
   "author": "has-sTeaLth",
-  "license": "MIT",
+  "license": "free",
 
   "main": "main.js",
 
   "repository": {
     "type": "git",
-    "url": "https://github.com/has-sTeaLth/iobroker.marstek.git"
+    "url": "https://github.com/has-sTeaLth/ioBroker.marstek.git"
   },
   "bugs": {
-    "url": "https://github.com/has-sTeaLth/iobroker.marstek/issues"
+    "url": "https://github.com/has-sTeaLth/ioBroker.marstek/issues"
   },
-  "homepage": "https://github.com/has-sTeaLth/iobroker.marstek#readme",
+  "homepage": "https://github.com/has-sTeaLth/ioBroker.marstek#readme",
 
   "keywords": [
     "iobroker",
