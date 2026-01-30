@@ -24,4 +24,4 @@ Tipp: Wenn `Bat.GetStatus` sporadisch Timeouts liefert, den **Inter-call delay**
 - 0.0.1 Initial release
 
 ## License
-MIT
+free
