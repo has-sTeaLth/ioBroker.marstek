@@ -38,13 +38,13 @@ Configure the adapter instance in the ioBroker admin interface.
 
 ### Polling settings
 - **Poll interval (sec)**  
-  Interval for polling the device (e.g. `30`).
+  Interval for polling the device (Default `30`).
 
 - **UDP timeout (ms)**  
-  Timeout per request (e.g. `8000`).
+  Timeout per request (Default `8000`).
 
 - **Inter-call delay (ms)**  
-  Delay between individual API calls (e.g. `200`).  
+  Delay between individual API calls (Default `3000`).  
   Increasing this value can improve stability on some firmware versions.
 
 ---
@@ -53,7 +53,6 @@ Configure the adapter instance in the ioBroker admin interface.
 
 - All available data points are created automatically.
 - Objects are read-only.
-- If `Bat.GetStatus` occasionally times out, increase **Inter-call delay** to `220–250 ms`.
 
 ## Changelog
 
