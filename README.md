@@ -19,3 +19,9 @@ In der Adapter-Instanz:
 - **Inter-call delay (ms)**: Pause zwischen einzelnen Requests (z.B. `150`) – erhöht die Stabilität bei manchen Firmwares
 
 Tipp: Wenn `Bat.GetStatus` sporadisch Timeouts liefert, den **Inter-call delay** auf `180–220 ms` erhöhen.
+
+## Changelog
+- 0.0.1 Initial release
+
+## License
+MIT
