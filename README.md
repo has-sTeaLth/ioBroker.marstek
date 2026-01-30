@@ -30,7 +30,7 @@ Configure the adapter instance in the ioBroker admin interface.
 
 - **Model group**
   - **Auto** (default, recommended)  
-    Automatically detects *Venus D*, otherwise uses *Venus C / E*.
+    Automatically detects *Venus D*, otherwise uses *Jupiter C / Venus E*.
   - **Venus C / E**  
     Without PV component.
   - **Venus D**  
