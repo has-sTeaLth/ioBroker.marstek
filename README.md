@@ -2,7 +2,7 @@
 
 # ioBroker.marstek
 
-ioBroker adapter for **Marstek Venus** devices using the **Open API (UDP JSON-RPC)**.
+ioBroker adapter for **Marstek** devices using the **Open API (UDP JSON-RPC)**.
 
 The adapter polls the device periodically, automatically creates all available data points, and structures them based on the API responses.
 
