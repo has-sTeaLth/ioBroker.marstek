@@ -64,7 +64,7 @@
     "modelGroup": "auto",
     "pollIntervalSec": 30,
     "timeoutMs": 8000,
-    "interCallDelayMs": 200
+    "interCallDelayMs": 3000
   },
   "objects": [],
   "instanceObjects": []
