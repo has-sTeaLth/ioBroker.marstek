@@ -16,9 +16,8 @@
       "has-sTeaLth"
     ],
     "licenseInformation": {
-      "type": "MIT",
       "license": "MIT",
-      "link": "LICENSE"
+      "type": "free"
     },
     "platform": "Javascript/Node.js",
     "mode": "daemon",
@@ -30,9 +29,6 @@
     "compact": true,
     "connectionType": "local",
     "dataSource": "poll",
-    "adminUI": {
-      "config": "html"
-    },
     "keywords": [
       "marstek",
       "venus",
@@ -41,10 +37,6 @@
       "udp",
       "json-rpc"
     ],
-    "licenseInformation": {
-      "license": "MIT",
-      "type": "free"
-    },
     "dependencies": [
       {
         "js-controller": ">=6.0.11"
@@ -59,6 +51,91 @@
       "0.0.1": {
         "en": "Initial release.",
         "de": "Initiale Version."
+      }
+    },
+    "adminUI": {
+      "config": "json",
+      "jsonConfig": {
+        "i18n": true,
+        "type": "panel",
+        "items": {
+          "connection": {
+            "type": "panel",
+            "label": "Connection",
+            "items": {
+              "ip": {
+                "type": "text",
+                "label": "Device IP",
+                "placeholder": "192.168.1.10",
+                "sm": 12,
+                "md": 6
+              },
+              "port": {
+                "type": "number",
+                "label": "UDP Port",
+                "min": 1,
+                "max": 65535,
+                "default": 30000,
+                "sm": 12,
+                "md": 3
+              },
+              "modelGroup": {
+                "type": "select",
+                "label": "Model group",
+                "default": "auto",
+                "options": [
+                  {
+                    "label": "Auto",
+                    "value": "auto"
+                  },
+                  {
+                    "label": "Venus C / E",
+                    "value": "ce"
+                  },
+                  {
+                    "label": "Venus D",
+                    "value": "d"
+                  }
+                ],
+                "sm": 12,
+                "md": 3
+              }
+            }
+          },
+          "polling": {
+            "type": "panel",
+            "label": "Polling",
+            "items": {
+              "pollIntervalSec": {
+                "type": "number",
+                "label": "Poll interval (sec)",
+                "min": 5,
+                "max": 3600,
+                "default": 30,
+                "sm": 12,
+                "md": 4
+              },
+              "timeoutMs": {
+                "type": "number",
+                "label": "UDP timeout (ms)",
+                "min": 1000,
+                "max": 30000,
+                "default": 8000,
+                "sm": 12,
+                "md": 4
+              },
+              "interCallDelayMs": {
+                "type": "number",
+                "label": "Inter-call delay (ms)",
+                "min": 0,
+                "max": 1000,
+                "default": 200,
+                "sm": 12,
+                "md": 4
+              }
+            }
+          }
+        }
       }
     }
   },
